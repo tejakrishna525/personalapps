@@ -6,6 +6,17 @@ const port = '3000'
   res.send('Hi')
  })
 
+ let githubdata = {
+  "name": "John Doe",
+  "age": 30,
+  "city": "New York"
+  
+ }
+
+ app.get('/githubdata',(req,res)=>{
+  res.json(githubdata)
+ })
+
  app.listen(port,()=>{
   console.log(`server is running on port ${port}`)
  })
